@@ -36,8 +36,14 @@ svn commit -F <msg-file>        # commits with message in a file
 svn commit <file1> <fileN>		# commit single files
 ~~~
 
-## log, diff and status
 
+## rollback
+~~~
+svn merge -r <rev2>:<rev1> .    # rollback changes from <rev1> to <rev2>
+~~~
+
+
+## log, diff and status
 ~~~
 svn log                         # log files of everything
 svn log -r <rev>                # log message of a specific revision
@@ -108,7 +114,7 @@ export SVN_EDITOR=vim          # vim is used to compose commit messages
 export LC_CTYPE=en_US.UTF-8    # unicode is used
 ~~~
 
-commands for vim:
+## commands for vim:
 ~~~
 :qw    # close vim an commit changes
 :cq    # close vim an cancel commit changes
